@@ -14,6 +14,7 @@ add_library(Kamotsu SHARED
   kamotsu.h
   airline.h airline.cpp
   airport.h airport.cpp
+  typecode.h typecode.cpp
 )
 
 target_compile_definitions(Kamotsu PRIVATE KAMOTSU_LIBRARY)
