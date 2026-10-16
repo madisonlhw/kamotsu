@@ -9,15 +9,24 @@ find_package(exiv2 REQUIRED CONFIG NAMES exiv2)
 find_package(nlohmann_json 3.12.0 REQUIRED)
 
 add_library(Kamotsu SHARED
+  # Headers
+  include/Kamotsu/kamotsu.h
+  include/Kamotsu/airline.h
+  include/Kamotsu/airport.h
+  include/Kamotsu/typecode.h
+  include/Kamotsu/aircraft.h
 
-  kamotsu.cpp
-  kamotsu.h
-  airline.h airline.cpp
-  airport.h airport.cpp
-  typecode.h typecode.cpp
-  aircraft.h aircraft.cpp
+  # Source Files
+  src/kamotsu.cpp
+  src/airline.cpp
+  src/airport.cpp
+  src/typecode.cpp
+  src/aircraft.cpp
 )
 
 target_compile_definitions(Kamotsu PRIVATE KAMOTSU_LIBRARY)
-target_include_directories(Kamotsu PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(Kamotsu PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+)
 target_link_libraries(Kamotsu PRIVATE Exiv2::exiv2lib nlohmann_json::nlohmann_json)
