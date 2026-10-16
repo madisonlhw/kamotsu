@@ -5,6 +5,8 @@
 #include <iostream>
 #include <nlohmann/json.hpp>
 
+#include <Kamotsu/filehandler.h>
+
 #include "airline.h"
 #include "typecode.h"
 

@@ -2,20 +2,11 @@
 
 namespace kamotsu {
 Aircraft::Aircraft(const std::string& path) {
-    std::ifstream file(path, std::ifstream::in);
-
-    try {
-        this->document = json::parse(file);
-        file.close();
-    } catch (json::parse_error& ex) {
-        std::cerr << "Could not parse JSON file. Error at byte " << ex.byte << std::endl;
-    }
+    FileHandler::open(path, document);
 }
 
 void Aircraft::save(const std::string& path) {
-    std::fstream file(path, std::fstream::out);
-    file << document;
-    file.close();
+    FileHandler::save(path, document);
 }
 
 std::string Aircraft::getRegistration() {
