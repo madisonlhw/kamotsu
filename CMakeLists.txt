@@ -22,6 +22,10 @@ add_library(Kamotsu SHARED
   src/airport.cpp
   src/typecode.cpp
   src/aircraft.cpp
+  include/Kamotsu/filehandler.h
+  src/filehandler.cpp
+
+
 )
 
 target_compile_definitions(Kamotsu PRIVATE KAMOTSU_LIBRARY)
