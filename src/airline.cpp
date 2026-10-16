@@ -1,4 +1,4 @@
-#include "airline.h"
+#include <Kamotsu/airline.h>
 
 namespace kamotsu {
 Airline::Airline(const std::string& path) {

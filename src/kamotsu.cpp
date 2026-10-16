@@ -1,4 +1,4 @@
-#include "kamotsu.h"
+#include <Kamotsu/kamotsu.h>
 
 namespace kamotsu {
 Kamotsu::Kamotsu() {}

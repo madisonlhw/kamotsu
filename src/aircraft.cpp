@@ -1,4 +1,4 @@
-#include "aircraft.h"
+#include <Kamotsu/aircraft.h>
 
 namespace kamotsu {
 Aircraft::Aircraft(const std::string& path) {

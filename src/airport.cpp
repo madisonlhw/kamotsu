@@ -1,4 +1,4 @@
-#include "airport.h"
+#include <Kamotsu/airport.h>
 
 namespace kamotsu {
 Airport::Airport(const std::string& path) {

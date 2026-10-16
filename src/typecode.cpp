@@ -1,4 +1,4 @@
-#include "typecode.h"
+#include <Kamotsu/typecode.h>
 
 namespace kamotsu {
 TypeCode::TypeCode(const std::string& path) {
