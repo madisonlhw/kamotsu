@@ -12,6 +12,7 @@ add_library(Kamotsu SHARED
 
   kamotsu.cpp
   kamotsu.h
+  airline.h airline.cpp
 )
 
 target_compile_definitions(Kamotsu PRIVATE KAMOTSU_LIBRARY)
