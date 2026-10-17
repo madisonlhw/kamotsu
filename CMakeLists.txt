@@ -24,6 +24,8 @@ add_library(Kamotsu SHARED
   src/typecode.cpp
   src/aircraft.cpp
   src/filehandler.cpp
+  include/Kamotsu/photo.h
+  src/photo.cpp
 )
 
 target_compile_definitions(Kamotsu PRIVATE KAMOTSU_LIBRARY)
