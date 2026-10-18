@@ -10,7 +10,6 @@ find_package(nlohmann_json 3.12.0 REQUIRED)
 
 add_library(Kamotsu SHARED
   # Headers
-
   include/Kamotsu/airline.h
   include/Kamotsu/airport.h
   include/Kamotsu/typecode.h
@@ -18,7 +17,6 @@ add_library(Kamotsu SHARED
   include/Kamotsu/filehandler.h
 
   # Source Files
-
   src/airline.cpp
   src/airport.cpp
   src/typecode.cpp
