@@ -3,6 +3,7 @@
 namespace kamotsu {
 Photo::Photo(const std::string& path) {
     Exiv2::XmpParser::initialize();
+    Exiv2::XmpProperties::registerNs("https://kamotsu.maddiekaze.dev/", "Kamotsu");
 
     try {
         image = Exiv2::ImageFactory::open(path);
@@ -17,6 +18,12 @@ Photo::Photo(const std::string& path) {
 
 Photo::~Photo() {
     Exiv2::XmpParser::terminate();
+}
+
+void Photo::save(const std::string& path) {
+    image->setExifData(exifData);
+    image->setXmpData(xmpData);
+    image->writeMetadata();
 }
 
 std::string Photo::getXmpData(const std::string& property) {

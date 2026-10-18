@@ -11,6 +11,8 @@ public:
     Photo(const std::string& path);
     ~Photo();
 
+    void save(const std::string& path);
+
     std::string getXmpData(const std::string& property);
     void setXmpData(const std::string& property, const std::string& value);
 
