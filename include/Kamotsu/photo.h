@@ -13,6 +13,10 @@ public:
 
     void save(const std::string& path);
 
+    std::string getExifData(const std::string& property);
+    void setExifData(const std::string& property, const std::string& value);
+    std::string getIptcData(const std::string& property);
+    void setIptcData(const std::string& property, const std::string& value);
     std::string getXmpData(const std::string& property);
     void setXmpData(const std::string& property, const std::string& value);
 
@@ -20,6 +24,7 @@ private:
     Exiv2::Image::UniquePtr image;
 
     Exiv2::ExifData exifData;
+    Exiv2::IptcData iptcData;
     Exiv2::XmpData xmpData;
 };
 }
