@@ -11,6 +11,9 @@ public:
     Photo(const std::string& path);
     ~Photo();
 
+    std::string getXmpData(const std::string& property);
+    void setXmpData(const std::string& property, const std::string& value);
+
 private:
     Exiv2::Image::UniquePtr image;
 

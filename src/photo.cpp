@@ -19,4 +19,12 @@ Photo::~Photo() {
     Exiv2::XmpParser::terminate();
 }
 
+std::string Photo::getXmpData(const std::string& property) {
+    return xmpData[property].toString();
+}
+
+void Photo::setXmpData(const std::string& property, const std::string& value) {
+    xmpData[property] = value;
+}
+
 }
